@@ -1,0 +1,311 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(10,140,200);
+    color: white;
+    padding: 2rem;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.studnet-sidebar-item{
+    margin-top: 1rem;
+}
+
+.studnet-sidebar-logout{
+    margin-top: 5rem;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidebar a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+.dropdown-btn:fouc{
+    outline: none;
+}
+
+  /* On mouse-over */
+.sidebar a:hover, .dropdown-btn:hover {
+    color: #dfd8d8;
+    border: none;
+  }
+
+  /* Add an active class to the active dropdown button */
+.active {
+    background-color:rgb(10,150,180);
+    color: white;
+}
+
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: rgb(10,150,180);;
+    padding-left: 8px;
+}
+
+.container, .add-student-container{
+    width:100%;
+    max-width:85%;
+    padding: 2rem;
+    margin-left: 1%;
+    
+    background-color: white;        
+
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+.dropdown-container a:hover{
+    background-color: rgb(68, 82, 85)
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.main-page-title, .title{
+    
+    margin-bottom: 1rem;
+    color: rgb(53, 53, 53);
+    
+}
+
+/* Input components */
+input, select, button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 5px 5px 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-container button{
+    width: calc(20% - 10px);
+    background-color: rgba(10, 140, 200, 0.95);
+    color: #fff;
+}
+
+
+
+#searchInput{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem; 
+}
+
+/*student table components*/
+
+/*Remove o spinning dos input*/
+.student-grade::-webkit-inner-spin-button, .student-grade::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.student-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.student-table th, .student-table td{
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin: 2px;
+}
+
+.student-table th{
+    background-color: rgba(10, 140, 200, 0.95);
+    color: rgba(255,255,255);
+}
+
+.student-grade{
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari */
+    appearance: none; /* Outros navegadores */
+    width: 60px;
+    text-align: center;
+    padding: 0.25rem;
+    margin: 0;
+}
+
+.save-btn, .delete-btn{
+    font-size: 0.8rem;
+    padding: 0.15rem;
+    width: 3rem;
+    color: rgb(255,250,245);
+}
+
+.save-btn{
+    background-color: rgb(15, 160, 15);
+}
+
+.delete-btn{
+    background-color: rgb(250, 50, 50);
+}
+
+.save-btn:hover{
+    background-color: rgb(15, 200, 15);
+}
+
+.delete-btn:hover{
+    background-color: rgb(255, 20, 20);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #0a8cc8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Add form components*/
+.add-student-container,.update-student-container {
+    margin-top: 2rem;
+    text-align: left;
+    max-width:100%;
+}
+
+.add-student-form-container{
+    display: grid;
+    grid-template-areas: 
+    'name name name name cpf cpf cpf cpf gradelvl gradelvl'
+    'cep cep cep cep address address address address address address ' 
+    'btn btn btn btn btn btn btn btn btn btn';
+    padding: 5px;
+    gap: 10px;
+}
+
+.update-student-form-container{
+    display: grid;
+    grid-template-areas: 
+    "name name cpf . ."
+    "gradelvl enrollment . . ."
+    "cep address address . ." 
+    "btn btn btn btn btn";
+    
+    padding: 5px;
+    gap: 10px;
+}
+
+.student-input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.div-name{
+    grid-area: name;
+}
+
+.div-cpf{
+    grid-area: cpf;
+}
+
+.div-grade-level{
+    grid-area: gradelvl;
+}
+
+.div-enrollment{
+    grid-area: enrollment;
+}
+
+.div-cep{
+    grid-area: cep;
+}
+
+.div-address{
+    grid-area: address;
+}
+
+.div-btn{
+    grid-area: btn;
+    align-items: center;
+}
+
+.add-student-container input, .update-student-container input {
+    width: calc(100% - 10px);
+}
+
+.add-student-container select{
+    width: calc(100% - 10px);
+}
+
+.add-student-container button, .update-student-container button {
+    width: calc(15% - 10px);
+    background-color: rgba(10, 140, 200, 0.95);
+    color: #fff;
+}
+
+.add-student-container button:hover, .search-container button:hover {
+    background-color: rgb(10, 100, 140);;
+}

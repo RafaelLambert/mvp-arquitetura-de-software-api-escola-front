@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loging</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container login-container">
+        <h2 class="main-page-title">Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="user-cpf">User CPF</label>
+                <input type="text" id="user-cpf" name="user-cpf" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" class="login-btn" onclick="getUserByCpf()">Login</button>
+            <!-- <p class="signup-text"><a href="#">Create</a> an account </p> -->
+        </form>
+    </div>
+
+    <script src="scream_login.js"></script>
+</body>
+</html>

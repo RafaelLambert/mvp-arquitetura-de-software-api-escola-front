@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function toggleMenu(element) {
+            element.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>My Profile</h2>
+        <h3 id ="studentName" class="studnet-sidebar-item">Nome</h3>
+        <h3 id ="studentCPf" class="studnet-sidebar-item">CPF</h3>
+        <h3 id ="StudentEnrollment" class="studnet-sidebar-item">Enrollment</h3>    
+        <h3 class="studnet-sidebar-logout"><a id="logout" href="#" onclick="logout()">Logout </a></h3>
+    </div>
+
+    <div class="container">
+        <!-- Student table -->
+        <table id="studentTable" class="student-table" aria-label="Student Data Table">
+            <thead>
+                <tr>
+                    <th class="student-grade" tabindex="0">Grade 1</th>
+                    <th class="student-grade" tabindex="0">Grade 2</th>
+                    <th class="student-grade" tabindex="0">Grade 3</th>
+                    <th class="student-grade" tabindex="0">Grade 4</th>
+                    <th class="student-grade" tabindex="0">Final Grade</th>
+                </tr>
+                <tr>
+                    <td id="grade_1" tabindex="0"></td>
+                    <td id="grade_2" tabindex="0"></td>
+                    <td id="grade_3" tabindex="0"></td>
+                    <td id="grade_4" tabindex="0"></td>
+                    <td id="finalAverage" tabindex="0"></td>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+    
+    <script src="script_dropdown.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
